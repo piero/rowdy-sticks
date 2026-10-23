@@ -83,7 +83,7 @@ input[type='checkbox'] { accent-color: var(--accent); }
 }
 .toolbar button, .toolbar select { -webkit-app-region: no-drag; }
 .toolbar .brand { display: flex; align-items: center; gap: 8px; font-weight: 650; letter-spacing: 0.2px; }
-.toolbar .logo { font-size: 18px; }
+.toolbar .logo { width: 28px; height: 28px; margin: 0 -2px; }
 .toolbar .group { display: flex; gap: 4px; }
 .toolbar .spacer { flex: 1; }
 

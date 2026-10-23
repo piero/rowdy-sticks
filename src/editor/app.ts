@@ -8,6 +8,7 @@ import { createFigure, newProject, normalizeProject } from '../model/project';
 import { demoProject } from '../anim/demo';
 import { clonePose, ensureKey, evaluate } from '../model/pose';
 import { alertUser, confirmUser, inTiny, openTextFile, saveFile } from '../platform/files';
+import logoUrl from '../../assets/icon.png';
 
 export function startApp(root: HTMLElement) {
   // ?demo forces the demo (ignoring the autosave); ?frame=N opens at a frame.
@@ -173,7 +174,7 @@ export function startApp(root: HTMLElement) {
     const toggle = (label: string, on: boolean, fn: () => void, title: string) =>
       button(label, fn, { class: on ? 'toggle on' : 'toggle', title });
     replaceChildren(toolbar,
-      h('div', { class: 'brand' }, h('span', { class: 'logo' }, '🥷'), 'Stickman Animator'),
+      h('div', { class: 'brand' }, h('img', { class: 'logo', src: logoUrl, alt: '' }), 'Rowdy Sticks'),
       h('div', { class: 'group' },
         button('New', actions.newProject, { title: 'New animation (⌘N)' }),
         button('Open…', actions.open, { title: 'Open project (⌘O)' }),

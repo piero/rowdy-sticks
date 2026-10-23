@@ -1,4 +1,6 @@
-# Stickman Animator
+<p align="center"><img src="assets/logo.png" alt="Rowdy Sticks" width="200"></p>
+
+# Rowdy Sticks
 
 Create, customise and animate stickmen, and stage fights between them, with
 weapon hits, blood, screen shake and baked ragdoll physics. Runs in the browser
@@ -10,7 +12,7 @@ or as a ~6 MB desktop app via [TinyJS](https://tinyjs.app/).
 npm install
 npm run dev          # browser: http://127.0.0.1:5173  (?demo forces the demo scene)
 tinyjs dev           # native window with hot reload
-tinyjs build         # dist/Stickman Animator.app (ad-hoc signed, this Mac's CPU)
+tinyjs build         # dist/Rowdy Sticks.app (ad-hoc signed, this Mac's CPU)
 npm test             # headless model/physics tests
 ```
 

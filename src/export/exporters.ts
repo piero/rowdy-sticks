@@ -186,7 +186,7 @@ export async function exportSpriteSheet(project: Project, r: ExportRange & { col
   const blob = await new Promise<Blob>((res, rej) => c.toBlob((b) => (b ? res(b) : rej(new Error('PNG encoding failed'))), 'image/png'));
   const json = JSON.stringify({
     frames: meta,
-    meta: { app: 'Stickman Animator', version: '1', image: '', format: 'RGBA8888', size: { w: W, h: H }, scale: '1', fps: project.fps / (r.step ?? 1) },
+    meta: { app: 'Rowdy Sticks', version: '1', image: '', format: 'RGBA8888', size: { w: W, h: H }, scale: '1', fps: project.fps / (r.step ?? 1) },
   }, null, 2);
   return { png: new Uint8Array(await blob.arrayBuffer()), json, width: W, height: H, count: frames.length };
 }

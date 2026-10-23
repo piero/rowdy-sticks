@@ -5,7 +5,9 @@ import { normalizeProject } from '../model/project';
 export type EditorEvent = 'project' | 'structure' | 'frame' | 'selection' | 'view';
 export type Tool = 'fk' | 'ik';
 
-const AUTOSAVE_KEY = 'stickman-animator:autosave';
+const AUTOSAVE_KEY = 'rowdy-sticks:autosave';
+/** Autosave key from before the rename, still read so existing work isn't lost. */
+const LEGACY_AUTOSAVE_KEY = 'stickman-animator:autosave';
 const HISTORY_LIMIT = 120;
 
 export class Editor {
@@ -133,7 +135,7 @@ export class Editor {
 
   static loadAutosave(): Project | null {
     try {
-      const raw = localStorage.getItem(AUTOSAVE_KEY);
+      const raw = localStorage.getItem(AUTOSAVE_KEY) ?? localStorage.getItem(LEGACY_AUTOSAVE_KEY);
       return raw ? normalizeProject(JSON.parse(raw)) : null;
     } catch {
       return null;

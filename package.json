@@ -1,0 +1,22 @@
+{
+  "name": "stickman-animator",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "tsc --noEmit && vite build --base=./",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/run-tests.mjs"
+  },
+  "dependencies": {
+    "gifenc": "^1.0.3",
+    "mp4-muxer": "^5.2.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}
